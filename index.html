@@ -99,8 +99,11 @@
                         console.log(results);
                         
                         var presentDate = moment().format("l");
+                        var kelvin = results.temp;
+                        var fahrenheit = ((kelvin - 273.15) * 9 / 5 + 32).toFixed(2);
 
-                        cityName.append(response.name + " " + presentDate);
+                        cityName.text(response.name + " " + presentDate);
+                        presentTemp.text("Temperature: " + fahrenheit + "°F");
 
 
 
