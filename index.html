@@ -102,24 +102,33 @@
                         var kelvin = results.temp;
                         var fahrenheit = ((kelvin - 273.15) * 9 / 5 + 32).toFixed(2);
 
+                        //hard code city name, temp, humidity,windspeed, and uvIndex in html for the card.
                         cityName.text(response.name + " " + presentDate);
                         presentTemp.text("Temperature: " + fahrenheit + "°F");
                         presentHumid.text("Humidity: " + results.humidity + "%");
                         windSpeed.text("Wind Speed: " + response.wind.speed + " MPH")
+
+
+                        //vars used in UVqueryURL. did not work unless nested in first ajax call. other solution possible?
+                        var UVlat = response.coord.lat;
+                        var UVlon = response.coord.lon;
+                        var UVqueryURL = "http://api.openweathermap.org/data/2.5/uvi?lat=" + UVlat + "&lon=" + UVlon + "&appid=171a41c2a4c3b7c582f7e6e1ed1588c2"
+                        $.ajax({
+                            url: UVqueryURL,
+                            method: "GET"
+                        })
+                            .then(function (response) {
+                                console.log(response);
+                                //value contains the UV index obtained from the lattitude and longitude.
+                                uvIndex.text("UV Index: " + response.value);
+
+                                //if conditional to determine favorable, moderate, severe goes here. 
+                            })
                     })
 
-                var UVlat = response.coord.lat;
-                var UVlon = response.coord.lon;
 
-                var UVqueryURL = "http://api.openweathermap.org/data/2.5/uvi?lat=" + UVlat + "&lon=" + UVlon + "&appid=171a41c2a4c3b7c582f7e6e1ed1588c2"
 
-                $.ajax({
-                    url: UVqueryURL,
-                    method: "GET"
-                })
-                    .then(function(response){
-                        console.log(response);
-                    })
+
             })
         });
     </script>
