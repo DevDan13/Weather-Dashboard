@@ -19,8 +19,8 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-4">
-                <div class="card">
+            <div class="col-lg-4">
+                <div class="card" id="sideCard">
                     <div class="card-body">
                         <h5 class="card-title">Search for a City:</h5>
                         <form class="form-inline">
@@ -36,21 +36,33 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-7">
-                <div class="card">
+            <div class="col-lg-8">
+                <div class="card" id="mainCard">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title" id="cityName"></h5>
+                        <img id="presentIcon">
+                        <p class="card-text" id="presentTemp"></p>
+                        <p class="card-text" id="presentHumid"></p>
+                        <p class="card-text" id="windSpeed"></p>
+                        <p class="card-text" id="uvIndex"></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12" id="fiveDayForcast">
+                        5 Day Forcast:
+                        
+                        <div> 
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="fiveDayForcast">
-            5 Day Forcast:
-        </div>
+    </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script>
@@ -59,20 +71,39 @@
 
             $("#searchBtn").on("click", function (event) {
                 event.preventDefault();
-                var citySearch = $('#citySearch').val();
 
-                var queryUrl = "https://api.openweathermap.org/data/2.5/weather?q=London&appid=171a41c2a4c3b7c582f7e6e1ed1588c2"
+                //variables to fill the main weather card
+                var citySearch = $(this).siblings("#citySearch").val();
+                var cityName = $("#cityName");
+                var presentIcon = $("#presentIcon");
+                var presentTemp = $("#presentTemp");
+                var presentHumid = $("#presentHumid");
+                var windSpeed = $("#windSpeed");
+                var uvIndex = $("#uvIndex");
 
-                console.log(queryUrl);
+                //variables to fill the 5 day forcast section
+                //var futureDate = $("#citySearch");
+
+                //our queryURL for current weather 
+                var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + citySearch + "&appid=171a41c2a4c3b7c582f7e6e1ed1588c2"
+
+                console.log(queryURL);
 
                 $.ajax({
-                    url: queryUrl,
+                    url: queryURL,
                     method: "GET"
                 })
                     .then(function (response) {
                         console.log(response);
                         var results = response.main;
                         console.log(results);
+                        
+                        var presentDate = moment().format("l");
+
+                        cityName.append(response.name + " " + presentDate);
+
+
+
                     })
 
 

@@ -3,10 +3,22 @@
     font-size: 50px;
 }
 
-.card{
-    margin-left: 50px;
+.container{
+    margin-left: unset;
 }
 
+#sideCard{
+    background-color: rgb(196, 196, 196);
+    padding-bottom: 76%;
+}
+
+#searchButton{
+    padding-right: 25px;
+}
+
+/* #mainCard{
+    
+} */
 #fiveDayForcast{
     margin-left: 38%;
     font-size: xx-large;
