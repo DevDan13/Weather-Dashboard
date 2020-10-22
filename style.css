@@ -6,3 +6,9 @@
 .card{
     margin-left: 50px;
 }
+
+#fiveDayForcast{
+    margin-left: 38%;
+    font-size: xx-large;
+    font-weight: bolder;
+}
