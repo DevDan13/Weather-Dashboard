@@ -14,13 +14,23 @@
 
 #searchButton{
     padding-right: 25px;
+    padding-left: 16px;
 }
 
-/* #mainCard{
-    
-} */
+.searchHistory{
+    padding-right: 90px;
+    padding-left: 16px;
+}
+
+.mainCard{
+    font-size: large;
+}
+
+#cityName{
+    font-size: larger;
+    font-weight: 700;
+}
 #fiveDayForcast{
-    margin-left: 38%;
     font-size: xx-large;
     font-weight: bolder;
 }
