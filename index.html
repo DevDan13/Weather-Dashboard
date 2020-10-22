@@ -51,8 +51,8 @@
                 <div class="row">
                     <div class="col-sm-12" id="fiveDayForcast">
                         5 Day Forcast:
-                        
-                        <div> 
+
+                        <div>
 
                         </div>
                     </div>
@@ -97,7 +97,7 @@
                         console.log(response);
                         var results = response.main;
                         console.log(results);
-                        
+
                         var presentDate = moment().format("l");
                         var kelvin = results.temp;
                         var fahrenheit = ((kelvin - 273.15) * 9 / 5 + 32).toFixed(2);
@@ -106,11 +106,20 @@
                         presentTemp.text("Temperature: " + fahrenheit + "°F");
                         presentHumid.text("Humidity: " + results.humidity + "%");
                         windSpeed.text("Wind Speed: " + response.wind.speed + " MPH")
-
-
                     })
 
+                var UVlat = response.coord.lat;
+                var UVlon = response.coord.lon;
 
+                var UVqueryURL = "http://api.openweathermap.org/data/2.5/uvi?lat=" + UVlat + "&lon=" + UVlon + "&appid=171a41c2a4c3b7c582f7e6e1ed1588c2"
+
+                $.ajax({
+                    url: UVqueryURL,
+                    method: "GET"
+                })
+                    .then(function(response){
+                        console.log(response);
+                    })
             })
         });
     </script>
