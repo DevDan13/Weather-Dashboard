@@ -30,6 +30,32 @@
     font-size: larger;
     font-weight: 700;
 }
+
+.uvLow{
+    display: inline-flex;
+    background-color: green;
+}
+
+.uvMod{
+    display: inline-flex;
+    background-color: yellow;
+}
+
+.uvHigh{
+    display: inline-flex;
+    background-color: orange;
+}
+
+.uvVeryHigh{
+    display: inline-flex;
+    background-color: red;
+}
+
+.uvExtreme{
+    display: inline-flex;
+    background-color: rebeccapurple;
+}
+
 #fiveDayForcast{
     font-size: xx-large;
     font-weight: bolder;
