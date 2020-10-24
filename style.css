@@ -33,7 +33,7 @@
 
 .uvLow{
     display: inline-flex;
-    background-color: green;
+    background-color: lightgreen;
 }
 
 .uvMod{
@@ -43,20 +43,23 @@
 
 .uvHigh{
     display: inline-flex;
-    background-color: orange;
+    background-color: darkorange;
+    color: white;
 }
 
 .uvVeryHigh{
     display: inline-flex;
-    background-color: red;
+    background-color: darkred;
+    color: white;
 }
 
 .uvExtreme{
     display: inline-flex;
     background-color: rebeccapurple;
+    color: white;
 }
 
-#fiveDayForcast{
+#fiveDayForecast{
     font-size: xx-large;
     font-weight: bolder;
 }
