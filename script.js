@@ -18,10 +18,10 @@ $(document).ready(function () {
         //our queryURL for current weather 
         var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + citySearch + "&appid=171a41c2a4c3b7c582f7e6e1ed1588c2"
 
-        console.log(queryURL);
+        //console.log(queryURL);
 
 
-        //forecast(citySearch);
+        forecast(citySearch);
 
         $.ajax({
             url: queryURL,
@@ -56,6 +56,17 @@ $(document).ready(function () {
 
                         //  console.log(response);
 
+                        function RemoveClasses() {
+                            var uvClass = $("#uvIndex");
+
+                            uvClass.removeClass("uvLow");
+                            uvClass.removeClass("uvMod");
+                            uvClass.removeClass("uvHigh");
+                            uvClass.removeClass("uvVeryHigh");
+                            uvClass.removeClass("uvExtreme");
+                        }
+
+                        RemoveClasses();
                         uvIndex.text(response.value);
                         var uvValue = Math.round(response.value);
 
@@ -94,16 +105,16 @@ $(document).ready(function () {
         })
             .then(function (response) {
                 console.log('forecast ', response);
-                for (var i = 0; i < response.list.length; i++) {
-                    if (response.list[i].dt_txt.indexOf('15:00:0')) {
+                // for (var i = 0; i < response.list.length; i++) {
+                //     if (response.list[i].dt_txt.indexOf('15:00:0')) {
 
-                        var day1Date = $("#day1Date");
+                //         var day1Date = $("#day1Date");
                         
 
-                        //use two arrays of objects to complete fields for all 5 days?
+                //         //use two arrays of objects to complete fields for all 5 days?
 
-                    }
-                }
+                //     }
+                // }
             })
     }
 });
