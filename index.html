@@ -30,67 +30,72 @@
                                 <button type="submit" class="btn btn-primary mb-2 fa fa-search" id="searchBtn"></button>
                             </div>
                         </form>
-                        <ul class="list-group list-group-flush searchHistory">
-                            <li class="list-group-item">Cras justo odio</li>
+                        <ul class="list-group list-group-flush search-history">
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="col-lg-8">
-                <div class="card mainCard">
-                    <div class="card-body">
-                        <h5 class="card-title" id="cityName">City: </h5>
-                        <img id="presentIcon">
-                        <p class="card-text">Temperature: <span id="presentTemp"></span></p>
-                        <p class="card-text">Humidity: <span id="presentHumid"></span> </p>
-                        <p class="card-text">Wind Speed: <span id="windSpeed"></span></p>
-                        <p class="card-text uvColor"></p>UV Index: <span id="uvIndex"></span></p>
-                    </div>
-                </div>
-
-                <div class="row" id="fiveDayForecast">5 Day Forecast:</div>
-
                 <div class="row">
-
-                    <div class="col-sm-2" id="day1Forecast">
-                        <p id="day1Date"></p>
-                        <p id="day1Icon"></p>
-                        <p id="day1Temp"></p>
-                        <p id="day1Humidity"></p>
+                    <div class="col-md-12">
+                        <div class="card mainCard">
+                            <div class="card-body">
+                                <h5 class="card-title" id="cityName">City: </h5>
+                                <img id="presentIcon">
+                                <p class="card-text">Temperature: <span id="presentTemp"></span></p>
+                                <p class="card-text">Humidity: <span id="presentHumid"></span> </p>
+                                <p class="card-text">Wind Speed: <span id="windSpeed"></span></p>
+                                <p class="card-text uvColor"></p>UV Index: <span id="uvIndex"></span></p>
+                            </div>
+                        </div>
                     </div>
+                    <div class="row" id="fiveDayForecast">5 Day Forecast: </div>
+                       
+                        <div class="row" id="fiveDayStyling">
 
-                    <div class="col-sm-2" id="day2Forecast">
-                        <p id="day2Date"></p>
-                        <p id="day2icon"></p>
-                        <p id="day2Temp"></p>
-                        <p id="day2Humidity"></p>
-                    </div>
+                            <div class="col-sm-2" id="day1Forecast">
+                                <p id="day1Date"></p>
+                                <p id="day1Icon"></p>
+                                <p id="day1Temp"></p>
+                                <p id="day1Humidity"></p>
+                            </div>
 
-                    <div class="col-sm-2" id="day3Forecast">
-                        <p id="day3Date"></p>
-                        <p id="day3Icon"></p>
-                        <p id="day3Temp"></p>
-                        <p id="day3Humidity"></p>
-                    </div>
+                            <div class="col-sm-2" id="day2Forecast">
+                                <p id="day2Date"></p>
+                                <p id="day2icon"></p>
+                                <p id="day2Temp"></p>
+                                <p id="day2Humidity"></p>
+                            </div>
 
-                    <div class="col-sm-2" id="day4Forecast">
-                        <p id="day4Date"></p>
-                        <p id="day4Icon"></p>
-                        <p id="day4Temp"></p>
-                        <p id="day4Humidity"></p>
-                    </div>
+                            <div class="col-sm-2" id="day3Forecast">
+                                <p id="day3Date"></p>
+                                <p id="day3Icon"></p>
+                                <p id="day3Temp"></p>
+                                <p id="day3Humidity"></p>
+                            </div>
 
-                    <div class="col-sm-2" id="day5Forecast">
-                        <p id="day5Date"></p>
-                        <p id="day5Icon"></p>
-                        <p id="day5Temp"></p>
-                        <p id="day5Humidity"></p>
-                    </div>
+                            <div class="col-sm-2" id="day4Forecast">
+                                <p id="day4Date"></p>
+                                <p id="day4Icon"></p>
+                                <p id="day4Temp"></p>
+                                <p id="day4Humidity"></p>
+                            </div>
+
+                            <div class="col-sm-2" id="day5Forecast">
+                                <p id="day5Date"></p>
+                                <p id="day5Icon"></p>
+                                <p id="day5Temp"></p>
+                                <p id="day5Humidity"></p>
+                            </div>
+
+                        </div>
                 </div>
+            </div>
 
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-                <script src="script.js"></script>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="script.js"></script>
 </body>
 
 </html>

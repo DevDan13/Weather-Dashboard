@@ -8,8 +8,8 @@
 }
 
 #sideCard{
-    background-color: rgb(196, 196, 196);
-    padding-bottom: 194%;
+    background-image: linear-gradient(to bottom, rgb(196, 196, 196), white);
+    padding-bottom: 75%;
 }
 
 #searchButton{
@@ -62,4 +62,8 @@
 #fiveDayForecast{
     font-size: xx-large;
     font-weight: bolder;
+}
+
+#fiveDayStyling{
+    
 }
