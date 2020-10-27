@@ -64,6 +64,36 @@
     font-weight: bolder;
 }
 
-/* #fiveDayStyling{
-    
-} */
+#fiveDayStyling{
+    color: white;
+}
+
+#day1Forecast{
+    background-color: rgb(68, 87, 194);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#day2Forecast{
+    background-color: rgb(68, 87, 194);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#day3Forecast{
+    background-color: rgb(68, 87, 194);
+    margin-left: 10px;
+    margin-right: 10px
+}
+
+#day4Forecast{
+    background-color: rgb(68, 87, 194);
+    margin-left: 10px;
+    margin-right: 10px
+}
+
+#day5Forecast{
+    background-color: rgb(68, 87, 194);
+    margin-left: 10px;
+    margin-right: 10px
+}
