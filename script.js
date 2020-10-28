@@ -46,7 +46,7 @@ $(document).ready(function () {
 
             //variables to fill the main weather card
             var cityName = $("#cityName");
-            var presentIcon = $("#presentIcon");
+            //var presentIcon = $("#presentIcon");
             var presentTemp = $("#presentTemp");
             var presentHumid = $("#presentHumid");
             var windSpeed = $("#windSpeed");

@@ -3,10 +3,6 @@
     font-size: 50px;
 }
 
-.container{
-    margin-left: unset;
-}
-
 #sideCard{
     background-image: linear-gradient(to bottom, rgb(196, 196, 196), white);
     padding-bottom: 75%;
@@ -59,6 +55,11 @@
     color: white;
 }
 
+#uvIndex{
+    border-radius: 5px;
+    opacity: 20px;
+}
+
 #fiveDayForecast{
     font-size: xx-large;
     font-weight: bolder;
@@ -69,31 +70,41 @@
 }
 
 #day1Forecast{
-    background-color: rgb(68, 87, 194);
-    margin-left: 10px;
-    margin-right: 10px;
+    background-color: rgb(91, 112, 231);
+    margin-left: 7PX;
+    margin-right: 7PX;
+    border-radius: 5px;
+    opacity: 95%;
 }
 
 #day2Forecast{
-    background-color: rgb(68, 87, 194);
-    margin-left: 10px;
-    margin-right: 10px;
+    background-color: rgb(91, 112, 231);
+    margin-left: 7PX;
+    margin-right: 7PX;
+    border-radius: 5px;
+    opacity: 95%;
 }
 
 #day3Forecast{
-    background-color: rgb(68, 87, 194);
-    margin-left: 10px;
-    margin-right: 10px
+    background-color: rgb(91, 112, 231);
+    margin-left: 7PX;
+    margin-right: 7PX;
+    border-radius: 5px;
+    opacity: 95%;
 }
 
 #day4Forecast{
-    background-color: rgb(68, 87, 194);
-    margin-left: 10px;
-    margin-right: 10px
+    background-color: rgb(91, 112, 231);
+    margin-left: 7PX;
+    margin-right: 7PX;
+    border-radius: 5px;
+    opacity: 95%;
 }
 
 #day5Forecast{
-    background-color: rgb(68, 87, 194);
-    margin-left: 10px;
-    margin-right: 10px
+    background-color: rgb(91, 112, 231);
+    margin-left: 7PX;
+    margin-right: 7PX;
+    border-radius: 5px;
+    opacity: 95%;
 }
