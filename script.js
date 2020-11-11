@@ -85,7 +85,7 @@ $(document).ready(function () {
                     //vars used in UVqueryURL. did not work unless nested in first ajax call. other solution possible?
                     var UVlat = response.coord.lat;
                     var UVlon = response.coord.lon;
-                    var UVqueryURL = "http://api.openweathermap.org/data/2.5/uvi?lat=" + UVlat + "&lon=" + UVlon + "&appid=171a41c2a4c3b7c582f7e6e1ed1588c2"
+                    var UVqueryURL = "https://api.openweathermap.org/data/2.5/uvi?lat=" + UVlat + "&lon=" + UVlon + "&appid=171a41c2a4c3b7c582f7e6e1ed1588c2"
                     $.ajax({
                         url: UVqueryURL,
                         method: "GET"
@@ -129,7 +129,7 @@ $(document).ready(function () {
 
     function futureForecast(citySearch) {
         //5day forcast goes here
-        var fiveDayQueryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + citySearch + "&appid=171a41c2a4c3b7c582f7e6e1ed1588c2"
+        var fiveDayQueryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + citySearch + "&appid=171a41c2a4c3b7c582f7e6e1ed1588c2"
 
         $.ajax({
             url: fiveDayQueryURL,
